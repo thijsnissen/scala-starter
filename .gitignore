@@ -1,10 +1,7 @@
-# This is free and unencumbered software released into the public domain.
-
 # Scala
 **/target
 *.class
 *.log
-
 
 # vCode IDEA
 .dotty-ide.json
