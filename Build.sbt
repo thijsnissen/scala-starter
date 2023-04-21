@@ -5,11 +5,12 @@ lazy val root =
 						, name    := "scala-starter"
 						, version := "0.1.0"
 						, libraryDependencies ++= Seq(
-								"org.scalatest"  %% "scalatest"  % "3.2.15" % "test"
+								"org.scalatest"  %% "scalatest"  % "3.2.15" % "test",
+								"com.lihaoyi" %% "pprint" % "0.8.1"
 							)
 						)
 
-scalacOptions ++= Seq(       
+scalacOptions ++= Seq(
 	"-encoding", "utf8",
 	"-feature",
 	"-language:implicitConversions",
