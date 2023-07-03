@@ -5,7 +5,6 @@ Directory structure and settings for starting a new Scala project.
 ## Plugins & Library Dependencies ##
 * [sbt-scalafmt](https://github.com/scalameta/sbt-scalafmt) `sbt scalafmtCheck / sbt scalafmtAll`
 * [sbt-updates](https://github.com/rtimush/sbt-updates) `sbt dependencyUpdates`
-* [sbt-native-packager](https://github.com/sbt/sbt-native-packager)
 * [pprint](https://github.com/com-lihaoyi/PPrint) `pprint.log() / pprint.pprintln()`
 * [scalatest](https://github.com/scalatest/scalatest) `sbt test`
 

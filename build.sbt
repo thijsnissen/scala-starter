@@ -7,8 +7,6 @@ ThisBuild / libraryDependencies ++= Seq(
 	"com.lihaoyi" %% "pprint" % "0.8.1"
 )
 
-enablePlugins(JavaAppPackaging)
-
 lazy val root =
 	project
 		.in(file("."))
