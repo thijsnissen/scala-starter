@@ -1,29 +1,25 @@
 ThisBuild / name         := "scala-starter"
 ThisBuild / version      := "0.1.0"
-ThisBuild / scalaVersion := "3.3.0"
-
-ThisBuild / libraryDependencies ++= Seq(
-	"org.scalatest"  %% "scalatest"  % "3.2.16" % "test",
-	"com.lihaoyi" %% "pprint" % "0.8.1"
-)
+ThisBuild / scalaVersion := "3.3.1"
 
 lazy val root =
 	project
 		.in(file("."))
 
-scalacOptions ++= Seq(
-	"-encoding", "utf8",
-	"-feature",
-	"-language:implicitConversions",
-	"-language:existentials",
-	"-unchecked",
-	"-Werror",
-	"-deprecation"
+ThisBuild / libraryDependencies ++= Seq(
+	"org.scalatest" %% "scalatest" % "3.2.16" % "test",
+	"com.lihaoyi"   %% "pprint"    % "0.8.1"
 )
 
-Compile / run / fork := true
-Compile / run / connectInput := true
-Compile / run / javaOptions += "-Xmx4G"
+ThisBuild / scalacOptions ++= Seq(
+	"-encoding", "utf8",
+	"-language:implicitConversions",
+	"-language:existentials",
+	"-deprecation",
+	"-feature",
+	"-unchecked",
+	"-Werror",
+)
 
 ThisBuild / watchBeforeCommand := Watch.clearScreen
 
@@ -33,3 +29,7 @@ ThisBuild / shellPrompt := {
 			s"${Project.extract(state).currentProject.id}" +
 			s"${scala.Console.CYAN}>${scala.Console.RESET}"
 }
+
+Compile / run / fork := true
+Compile / run / connectInput := true
+Compile / run / javaOptions += "-Xmx4G"
