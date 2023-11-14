@@ -2,6 +2,9 @@ object Version {
   lazy val app   = "0.1.0"
   lazy val scala = "3.3.1"
 
+  lazy val scalaTest = "3.2.15"
+  lazy val pprint    = "0.8.1"
+
   lazy val zio          = "2.0.18"
   lazy val zioHttp      = "3.0.0-RC3"
   lazy val zioJson      = "0.6.2"
