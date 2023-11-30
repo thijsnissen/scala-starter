@@ -8,6 +8,9 @@ Directory structure and settings for starting a new Scala project.
 * [pprint](https://github.com/com-lihaoyi/PPrint) `pprint.log() / pprint.pprintln()`
 * [scalatest](https://github.com/scalatest/scalatest) `sbt test`
 
+## Aliases ##
+* `format` = `scalafmtAll;scalafmtSbt`
+
 ## Settings for a new repository ##
 * license "The Unlicense"
 * settings / general
