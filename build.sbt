@@ -8,7 +8,7 @@ lazy val root =
     .settings(
       name           := "Scala Starter",
       normalizedName := "scala-starter",
-      description    := "Directory structure and settings for starting a new Scala project",
+      description := "Directory structure and settings for starting a new Scala project",
     )
     .settings(commonSettings ++ commonImports ++ aliases)
     .settings(libraryDependencies ++= Dependencies.common)
