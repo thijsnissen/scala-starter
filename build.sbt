@@ -5,13 +5,13 @@ ThisBuild / scalaVersion := Version.scala
 lazy val root =
   project
     .in(file("code"))
-    .settings(name := "scala-starter")
     .settings(
-      description := "Directory structure and settings for starting a new Scala project"
+      name           := "Scala Starter",
+      normalizedName := "scala-starter",
+      description    := "Directory structure and settings for starting a new Scala project",
     )
+    .settings(commonSettings ++ commonImports ++ aliases)
     .settings(libraryDependencies ++= Dependencies.common)
-    .settings(commonSettings ++ commonImports)
-    .settings(aliases)
 
 lazy val commonSettings = Seq(
   scalacOptions ++= Seq(
@@ -26,11 +26,11 @@ lazy val commonSettings = Seq(
     "-Wunused:imports",
     "-Wunused:locals",
     "-print-lines",
-    "-explain"
+    "-explain",
   ),
   Compile / run / fork         := true,
   Compile / run / connectInput := true,
-  Compile / run / javaOptions += "-Xmx4G"
+  Compile / run / javaOptions += "-Xmx4G",
 )
 
 lazy val commonImports = Seq(
@@ -40,12 +40,11 @@ lazy val commonImports = Seq(
       "scala",
       "scala.Predef",
       "scala.annotation",
-      "scala.util.chaining"
+      "scala.util.chaining",
     ).mkString("-Yimports:", ",", "")
 )
 
-lazy val aliases = {
+lazy val aliases =
   addCommandAlias("format", "scalafmtAll;scalafmtSbt")
-}
 
 ThisBuild / watchBeforeCommand := Watch.clearScreen
