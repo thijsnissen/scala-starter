@@ -11,7 +11,9 @@ Directory structure and settings for starting a new Scala project.
 
 ## Aliases ##
 * `format` = `scalafmtAll;scalafmtSbt`
-* `validate` = `format;compile;Test/compile"`
+* `check` = `scalafmtCheckAll;scalafmtSbtCheck`
+* `v` = `format;compile;Test/compile`
+* `vt` = `validate;test`
 
 ## Settings for a new repository ##
 * license "The Unlicense"
