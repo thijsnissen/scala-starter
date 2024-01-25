@@ -1,5 +1,5 @@
 import org.scalatest.funsuite.AnyFunSuite
 
 class TestSpec extends AnyFunSuite:
-  test("Example test"):
-    assertResult(true)(actual = true)
+  test("Main"):
+    assertResult("Hello, world!")(Main.msg)
