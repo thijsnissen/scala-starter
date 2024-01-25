@@ -16,7 +16,7 @@ lazy val root =
 lazy val app =
   project
     .in(file("code/app"))
-    .settings(Settings.common ++ Imports.common)
+    .settings(Settings.common ++ Settings.imports)
     .settings(libraryDependencies ++= Dependencies.common ++ Dependencies.test)
     .enablePlugins(JibPlugin)
 

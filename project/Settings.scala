@@ -21,4 +21,15 @@ object Settings {
     Compile / run / connectInput := true,
     Compile / run / javaOptions += "-Xmx4G"
   )
+
+  lazy val imports = Seq(
+    scalacOptions +=
+      Seq(
+        "java.lang",
+        "scala",
+        "scala.Predef",
+        "scala.annotation",
+        "scala.util.chaining"
+      ).mkString("-Yimports:", ",", "")
+  )
 }
