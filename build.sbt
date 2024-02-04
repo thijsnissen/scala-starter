@@ -17,7 +17,10 @@ lazy val app =
   project
     .in(file("code/app"))
     .settings(Settings.common ++ Settings.imports)
-    .settings(libraryDependencies ++= Dependencies.common ++ Dependencies.test)
+    .settings(
+      libraryDependencies ++=
+        Dependencies.common ++ Dependencies.app ++ Dependencies.test
+    )
     .enablePlugins(JibPlugin)
 
 ThisBuild / watchBeforeCommand := Watch.clearScreen
