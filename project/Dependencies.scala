@@ -6,7 +6,6 @@ object Dependencies {
   )
 
   lazy val app = Seq(
-    
   )
 
   lazy val test = Seq(
