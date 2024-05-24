@@ -28,4 +28,4 @@ Directory structure and settings for starting a new Scala project.
 
 ## GitHub Actions
 * Workflow `scala-build.yml` automatically checks for formatting and passing of all tests
-* Workflow `auto-approve-merge.yml` automatically approves and merges PRs labeled `scala-steward`
+* Workflow `auto-approve-merge.yml` automatically approves and merges PRs labeled `auto-approve-merge`
