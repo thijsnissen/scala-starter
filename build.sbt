@@ -24,3 +24,5 @@ lazy val app =
     .enablePlugins(JibPlugin)
 
 ThisBuild / watchBeforeCommand := Watch.clearScreen
+
+Global / onChangedBuildSource := ReloadOnSourceChanges
