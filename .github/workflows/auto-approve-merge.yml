@@ -1,4 +1,4 @@
-name: Auto Approve/Merge Scala Steward PR
+name: Auto Approve/Merge PR
 
 on:
   pull_request_target:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   auto-approve-merge:
-    if: contains( github.event.pull_request.labels.*.name, 'scala-steward')
+    if: contains( github.event.pull_request.labels.*.name, 'auto-approve-merge')
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
