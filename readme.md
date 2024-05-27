@@ -19,12 +19,15 @@ Directory structure and settings for starting a new Scala project.
 * license "The Unlicense"
 * settings / general
   * Automatically delete head branches
+  * Preserve this repository (uncheck)
 * settings / branches
-  * branche protection rules for `main`
+  * branche protection rule for `main`
     * Require a pull request before merging
     * pull request requires approval
     * require status checks to pass before merging
     * require branches to be up-to-date
+* settings / actions / general
+  * Allow GitHub Actions to create and approve pull requests
 
 ## GitHub Actions
 * Workflow `scala-build.yml` automatically checks for formatting and passing of all tests
