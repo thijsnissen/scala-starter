@@ -24,7 +24,7 @@ Directory structure and settings for starting a new Scala project.
   * branche protection rule for `main`
     * Require a pull request before merging
     * pull request requires approval
-    * require status checks to pass before merging
+    * require status checks to pass before merging (add `scala-build.yml` GitHub Actions workflow)
     * require branches to be up-to-date
 * settings / actions / general
   * Allow GitHub Actions to create and approve pull requests
