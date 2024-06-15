@@ -20,6 +20,7 @@ Directory structure and settings for starting a new Scala project.
 * settings / general
   * Automatically delete head branches
   * Preserve this repository (uncheck)
+  * Allow auto-merge (for `auto-approve-merge` GitHub Actions workflow)
 * settings / branches
   * branche protection rule for `main`
     * Require a pull request before merging
@@ -27,7 +28,7 @@ Directory structure and settings for starting a new Scala project.
     * require status checks to pass before merging (add `scala-build.yml` GitHub Actions workflow)
     * require branches to be up-to-date
 * settings / actions / general
-  * Allow GitHub Actions to create and approve pull requests
+  * Allow GitHub Actions to create and approve pull requests (for `auto-approve-merge` GitHub Actions workflow)
 
 ## GitHub Actions
 * Workflow `scala-build.yml` automatically checks for formatting and passing of all tests
