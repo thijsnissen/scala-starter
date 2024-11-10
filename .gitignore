@@ -41,3 +41,7 @@ metals.sbt
 .idea_modules
 /.worksheet/
 *.iml
+
+# Env
+*.env
+.env
