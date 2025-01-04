@@ -2,7 +2,6 @@ import sbt.*
 
 object Dependencies {
   lazy val common = Seq(
-    "com.lihaoyi" %% "pprint" % Version.pprint
   )
 
   lazy val app = Seq(
