@@ -19,7 +19,11 @@ object Settings {
     ),
     Compile / run / fork         := true,
     Compile / run / connectInput := true,
-    Compile / run / javaOptions += "-Xmx4G"
+    Compile / run / javaOptions ++= Seq(
+      "-XX:InitialRAMPercentage=50.0",
+      "-XX:MaxRAMPercentage=50.0",
+      "-XX:+HeapDumpOnOutOfMemoryError"
+    )
   )
 
   lazy val imports = Seq(
