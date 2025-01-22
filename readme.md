@@ -6,6 +6,7 @@ Directory structure and settings for starting a new Scala project.
 * [sbt-scalafmt](https://github.com/scalameta/sbt-scalafmt) `sbt scalafmtCheck` / `sbt scalafmtAll`
 * [sbt-jib](https://github.com/sbt-jib/sbt-jib) `sbt jibDockerBuild` / `sbt jibImageBuild`
 * [scalatest](https://github.com/scalatest/scalatest) `sbt test`
+* [sbt-dotenv](https://github.com/Philippus/sbt-dotenv) automatically load `.env` (needs `.sbtopts`)
 
 ## Aliases
 * `format` = `scalafmtAll;scalafmtSbt`
