@@ -22,7 +22,7 @@ object Settings {
     ThisBuild / run / javaOptions ++= Seq(
       "-XX:MaxRAMPercentage=50.0",
       "-XX:+HeapDumpOnOutOfMemoryError",
-      "-XX:+UseG1GC",
+      "-XX:+UseG1GC"
     )
   )
 
