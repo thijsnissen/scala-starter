@@ -17,8 +17,8 @@ object Settings {
       "-print-lines",
       "-explain"
     ),
-    Compile / run / connectInput   := true,
-    ThisBuild / run / fork         := true,
+    Compile / run / connectInput := true,
+    ThisBuild / run / fork       := true,
     ThisBuild / run / javaOptions ++= Seq(
       "-XX:MaxRAMPercentage=50.0",
       "-XX:+HeapDumpOnOutOfMemoryError",
