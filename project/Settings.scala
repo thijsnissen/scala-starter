@@ -17,12 +17,12 @@ object Settings {
       "-print-lines",
       "-explain"
     ),
-    Compile / run / fork         := true,
-    Compile / run / connectInput := true,
-    Compile / run / javaOptions ++= Seq(
-      "-XX:InitialRAMPercentage=50.0",
+    Compile / run / connectInput   := true,
+    ThisBuild / run / fork         := true,
+    ThisBuild / run / javaOptions ++= Seq(
       "-XX:MaxRAMPercentage=50.0",
-      "-XX:+HeapDumpOnOutOfMemoryError"
+      "-XX:+HeapDumpOnOutOfMemoryError",
+      "-XX:+UseG1GC",
     )
   )
 
