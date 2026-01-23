@@ -1,4 +1,26 @@
-# Scala Starter
+def identifierHealthCheck: Either[String, String] = {
+val lagNotAvailables: Int =
+if (identifierLag.isEmpty)
+lagNotAvailableCounter.incrementAndGet()
+else {
+lagNotAvailableCounter.set(0)
+0
+}
+(for {
+partitions <- identifierPartitions
+commitRate <- identifierCommitRate
+} yield
+if (partitions > 0 && commitRate === 0.0 && lagNotAvailables > maxLagNotAvailables) {
+log.warn(s"Identifier is not processing messages and lag is not available for some time ($lagNotAvailables)")
+Left("Identifier: Not processing messages and lag not available")
+} else {
+log.debug(s"Identifier is OK: $partitions partitions, commitRate ${commitRate.toString} and lags not available ($lagNotAvailables) is below maximum ($maxLagNotAvailables)")
+Right("Identifier: OK")
+}).getOrElse {
+log.info("No partitions and/or commit rate found for identifier")
+Right("Identifier: Unable to determine")
+}
+}# Scala Starter
 
 Directory structure and settings for starting a new Scala project.
 
