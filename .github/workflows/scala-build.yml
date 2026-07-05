@@ -20,4 +20,4 @@ jobs:
       - name: Setup SBT
         uses: sbt/setup-sbt@66fb4376e81982c7d92a4074170846fff88e2e30 # v1.5.0
       - name: Formatting & Tests
-        run: sbt -v check test
+        run: sbt -v "check;test"
