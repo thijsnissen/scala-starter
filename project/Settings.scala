@@ -17,10 +17,9 @@ object Settings:
       "-explain"
     ),
     Compile / run / connectInput := true,
-    ThisBuild / run / fork       := true,
-    ThisBuild / run / javaOptions ++= Seq(
+    Compile / run / fork         := true,
+    Compile / run / javaOptions ++= Seq(
       "-Xmx4G",
-      "-Xss1G",
       "-XX:+HeapDumpOnOutOfMemoryError",
       "-XX:+UseG1GC"
     )
