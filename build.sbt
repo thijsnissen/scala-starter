@@ -1,7 +1,3 @@
-Global / onChangedBuildSource := ReloadOnSourceChanges
-
-watchBeforeCommand := Watch.clearScreen
-
 organization := "nl.thijsnissen"
 version      := Version.semver
 scalaVersion := Version.scala
@@ -27,3 +23,7 @@ lazy val app =
         Dependencies.common ++ Dependencies.app ++ Dependencies.test
     )
     .enablePlugins(JibPlugin)
+
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
+watchBeforeCommand := Watch.clearScreen
