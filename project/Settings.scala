@@ -1,7 +1,7 @@
 import sbt.*
 import sbt.Keys.*
 
-object Settings {
+object Settings:
   lazy val common = Seq(
     scalacOptions ++= Seq(
       "-encoding",
@@ -17,9 +17,9 @@ object Settings {
       "-explain"
     ),
     Compile / run / connectInput := true,
-    ThisBuild / run / fork       := true,
-    ThisBuild / run / javaOptions ++= Seq(
-      "-XX:MaxRAMPercentage=50.0",
+    Compile / run / fork         := true,
+    Compile / run / javaOptions ++= Seq(
+      "-Xmx4G",
       "-XX:+HeapDumpOnOutOfMemoryError",
       "-XX:+UseG1GC"
     )
@@ -35,4 +35,3 @@ object Settings {
         "scala.util.chaining"
       ).mkString("-Yimports:", ",", "")
   )
-}
