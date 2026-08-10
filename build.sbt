@@ -1,6 +1,10 @@
-ThisBuild / organization := "nl.thijsnissen"
-ThisBuild / version      := Version.version
-ThisBuild / scalaVersion := Version.scala
+Global / onChangedBuildSource := ReloadOnSourceChanges
+
+watchBeforeCommand := Watch.clearScreen
+
+organization := "nl.thijsnissen"
+version      := Version.semver
+scalaVersion := Version.scala
 
 lazy val root =
   project
@@ -23,7 +27,3 @@ lazy val app =
         Dependencies.common ++ Dependencies.app ++ Dependencies.test
     )
     .enablePlugins(JibPlugin)
-
-ThisBuild / watchBeforeCommand := Watch.clearScreen
-
-Global / onChangedBuildSource := ReloadOnSourceChanges
